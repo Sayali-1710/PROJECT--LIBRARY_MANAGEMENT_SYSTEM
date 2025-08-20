@@ -1,8 +1,17 @@
-﻿namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models
+﻿using System.Transactions;
+
+namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models
 {
     public class Book
     {
-        public int Id { get; set; }
-        public string Nmae { get; set; }
+        public int BookId { get; set; }  
+        public string Title { get; set; } = ""; 
+        public string Author { get; set; } = "";
+        public string Genre { get; set; } = ""; 
+        public string ISBN { get; set; } = ""; 
+        public string PublicationYear { get; set; } 
+        public string Status { get; set; } = "Available";
+        public ICollection<Transaction> Transactions { get; set; }
+
     }
 }
