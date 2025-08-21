@@ -11,7 +11,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models
         public string Genre { get; set; }
         public string ISBN { get; set; }
         public int PublicationYear { get; set; } 
-        public BookStatus Status { get; set; } = BookStatus.Available;
+        public Enums.BookStatus Status { get; set; } =Enums.BookStatus.Available;
         
 
     }
