@@ -4,6 +4,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models
 {
     public class Book
     {
+
         public int BookId { get; set; }  
         public string Title { get; set; } = ""; 
         public string Author { get; set; } = "";
@@ -12,6 +13,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models
         public string PublicationYear { get; set; } 
         public string Status { get; set; } = "Available";
         public ICollection<Transaction> Transactions { get; set; }
+
 
     }
 }
