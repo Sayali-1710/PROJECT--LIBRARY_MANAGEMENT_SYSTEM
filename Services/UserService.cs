@@ -35,7 +35,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
         //Login
         public async Task<string> LoginAsync(LoginRequest request)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(u => u.Email==request.Email);
+            var user = await  _context.Users.FirstOrDefaultAsync(u => u. Email==request .Email);
             if (user==null)
                 throw new Exception("Invalid Credentials");
             var valid = BCrypt.Net.BCrypt.Verify(request.Password, user.Password);
@@ -43,6 +43,14 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             return _tokenService.GenerateToken(user);
         }
 
+        public Task RegisterAsync(Microsoft.AspNetCore.Identity.Data.RegisterRequest req)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Task LoginAsync(Microsoft.AspNetCore.Identity.Data.LoginRequest req)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
