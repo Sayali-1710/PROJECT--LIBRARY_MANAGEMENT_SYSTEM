@@ -6,6 +6,7 @@ This project provides role-based access (Admin, Librarian, Member), JWT Authenti
 
 
 
+
 🚀 Features
 
 🔑 Authentication & Authorization (JWT-based)
@@ -21,6 +22,7 @@ This project provides role-based access (Admin, Librarian, Member), JWT Authenti
 📊 API Documentation with Swagger
 
 🗂 Database Integration with EF Core & SQL Server
+
 
 
 
@@ -40,6 +42,7 @@ Tools: Visual Studio, Postman, Git
 
 
 
+
 📂 Project Structure
 
 LibraryManagementSystem/
@@ -55,12 +58,13 @@ LibraryManagementSystem/
 
 
 
+
 ⚙ Setup & Installation
 
 1. Clone the repository:
 
-git clone
-https://github.com/Sayali-1710/PROJECT--LIBRARY_MANAGEMENT_SYSTEM
+ git clone
+ https://github.com/Sayali-1710/PROJECT--LIBRARY_MANAGEMENT_SYSTEM
 
 
 2. Update appsettings.json with your SQL Server connection string.
@@ -68,31 +72,30 @@ https://github.com/Sayali-1710/PROJECT--LIBRARY_MANAGEMENT_SYSTEM
 
 3. Run migrations:
 
-dotnet ef database update
+   dotnet ef database update
 
 
 4. Start the project:
 
-dotnet run
+   dotnet run
 
 
 5. Open Swagger at:
 
-https://localhost:5001/swagger
-
+  http://localhost:5243/swagger/index.html
 
 
 
 🧪 API Testing
 
-Use Swagger UI or Postman Collection (included in repo).
+  Use Swagger UI or Postman Collection (included in repo).
 
-Example login request:
+  Example login request:
 
-{
-  "username": "admin",
-  "password": "admin123"
-}
+  {
+   "username": "admin",
+   "password": "admin123"
+  }
 
 
 
@@ -100,11 +103,11 @@ Example login request:
 
 🔑 User Roles
 
-Role	Permissions
+  Role	Permissions
 
-Admin	Manage books, users, system settings
-Librarian	Issue/return books, manage users
-Member	Search, borrow, return books
+  Admin	Manage books, users, system settings
+  Librarian	Issue/return books, manage users
+  Member	Search, borrow, return books
 
 
 
@@ -112,13 +115,13 @@ Member	Search, borrow, return books
 
 🏆 Why This Project is Special?
 
-✅ Follows Clean Architecture (Controller → Service → Repository → DB)
+  ✅ Follows Clean Architecture (Controller → Service → Repository → DB)
 
-✅ JWT-secured APIs like in real-world enterprise apps
+  ✅ JWT-secured APIs like in real-world enterprise apps
 
-✅ Perfect for learning ASP.NET Core Web API + SQL Server + EF Core
+  ✅ Perfect for learning ASP.NET Core Web API + SQL Server + EF Core
 
-✅ Ready-to-use for college projects or portfolio showcase
+  ✅ Ready-to-use for college projects or portfolio showcase
 
 
 
@@ -126,4 +129,10 @@ Member	Search, borrow, return books
 
 🤝 Contribution
 
-Contributions are welcome! Please fork the repo and create a pull request.
+   Contributions are welcome! Please fork the repo and create a pull request.
+   
+## 👨‍💻 Collaborators
+
+- [Sayali Todkar](https://github.com/Sayali-1710)
+- [Vaibhavi Mogare](https://github.com/VaibhaviMogare)
+  
