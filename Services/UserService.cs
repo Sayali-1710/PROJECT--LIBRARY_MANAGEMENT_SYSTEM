@@ -16,6 +16,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             _context = context;
             _tokenService = tokenService;
         }
+        //Register
         public async Task RegisterAsync(RegisterRequest request)
         {
             var exists = (await _context.Users.AnyAsync(u => u.Email==request.Email));
@@ -31,6 +32,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             await _userRepo.AddAsync(user);
             await _context.SaveChangesAsync();
         }
+        //Login
         public async Task<string> LoginAsync(LoginRequest request)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Email==request.Email);
@@ -40,7 +42,6 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             if (!valid) throw new Exception("Invalid credentials");
             return _tokenService.GenerateToken(user);
         }
-
 
     }
 }

@@ -19,6 +19,14 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             await _repo.AddAsync(book);
             await _context.SaveChangesAsync();
         }
+        public async Task UpdateAsync(Book book)
+        {
+            var existingBook = await _repo.GetByIdAsync(book.BookId);
+            if (existingBook==null)
+                throw new Exception("Book not found");
+            _repo.Update(book);
+            await _context.SaveChangesAsync();
+        }
         public async Task DeleteAsync(int id)
         {
             var book = await _repo.GetByIdAsync(id);
