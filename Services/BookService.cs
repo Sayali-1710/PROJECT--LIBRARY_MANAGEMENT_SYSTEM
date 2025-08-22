@@ -36,9 +36,6 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAsync(Book book)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
