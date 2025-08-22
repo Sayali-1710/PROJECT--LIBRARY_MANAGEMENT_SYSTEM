@@ -22,6 +22,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//connection string 
 builder.Services.AddDbContext<LibraryContext>(equals => equals.UseSqlServer(builder.Configuration.GetConnectionString("LIMS")));
 
 var app = builder.Build();
