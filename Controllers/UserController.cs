@@ -36,7 +36,8 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Controllers
         {
             try
             {
-                var token = await _userService.LoginAsync(request);
+                var token = await 
+                    _userService.LoginAsync(request);
                 
                 return Ok(new { token });
             }
@@ -71,5 +72,5 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Controllers
 
 
 
-        }
+     }
 }
