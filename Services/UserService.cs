@@ -5,7 +5,7 @@ using PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models;
 using PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Repository;
 namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
 {
-    public class UserService:IUserService
+    public class UserService: IUserService
     {
         private readonly IGenericRepository<User> _userRepo;
         private readonly LibraryContext _context;
@@ -42,6 +42,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             if (!valid) throw new Exception("Invalid credentials");
             return _tokenService.GenerateToken(user);
         }
+
 
     }
 }
