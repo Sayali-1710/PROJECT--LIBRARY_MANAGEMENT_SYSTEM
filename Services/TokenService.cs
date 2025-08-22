@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
 {
-    public class TokenService:ITokenService
+    public class TokenService: ITokenService
     {
         private readonly IConfiguration _configuration;
         public TokenService(IConfiguration configuration)
@@ -15,8 +15,9 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
         }
         public string GenerateToken( User user)
         {
+            //var tokenHandler = new JwtSecurityTokenHandler();
             var jwtSettings = _configuration.GetSection("JwtSettings");
-            var secretkey = jwtSettings["Secretkey"];
+            var SecretKey = jwtSettings["SecretKey"];
             var expiryMinutes = int.Parse(jwtSettings["ExpiryMinutes"]??"60");
             var claims = new[]
             {
@@ -25,7 +26,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.Role,user.Role.ToString())
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretkey));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SecretKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(
                 issuer: jwtSettings["Issuer"],
