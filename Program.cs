@@ -35,7 +35,7 @@ builder.Services.AddDbContext<LibraryContext>(equals => equals.UseSqlServer(buil
 //builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //Authentication -Jwt
-var jwtSettings = builder.Configuration.GetSection("Jwt");
+var jwtSettings = builder.Configuration.GetSection("JwtSetting");
 var key = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]);
 builder.Services.AddAuthentication(options =>
 {
