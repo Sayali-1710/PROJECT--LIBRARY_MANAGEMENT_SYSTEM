@@ -3,7 +3,7 @@ using PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Repository;
 
 namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
 { 
-    public class BookService:IBookService
+    public class BookService: IBookService
     {
         private readonly IGenericRepository<Book> _repo;
         private readonly LibraryContext _context;
@@ -27,6 +27,10 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             _repo.Remove(book);
             await _context.SaveChangesAsync();
         }
-          
+
+        public Task UpdateAsync(Book book)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

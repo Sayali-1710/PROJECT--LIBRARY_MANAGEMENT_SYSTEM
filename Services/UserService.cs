@@ -5,7 +5,7 @@ using PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Models;
 using PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Repository;
 namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
 {
-    public class UserService:IUserService
+    public class UserService: IUserService
     {
         private readonly IGenericRepository<User> _userRepo;
         private readonly LibraryContext _context;
@@ -41,6 +41,14 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Services
             return _tokenService.GenerateToken(user);
         }
 
+        public Task RegisterAsync(Microsoft.AspNetCore.Identity.Data.RegisterRequest request)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Task<string> LoginAsync(Microsoft.AspNetCore.Identity.Data.LoginRequest request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
