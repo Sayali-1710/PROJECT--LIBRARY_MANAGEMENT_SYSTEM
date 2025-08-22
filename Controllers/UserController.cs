@@ -46,30 +46,7 @@ namespace PROJECT__LIBRARY_MANAGEMENT_SYSTEM.Controllers
                 return Unauthorized(new {error = ex.Message});
             }
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       
 
 
      }
